@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `ShellSurfaceUserImplementation` struct in crate `smithay`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, ShellSurfaceUserImplementation">
+
+    <title>smithay::wayland::shell::ShellSurfaceUserImplementation - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        
+        <p class='location'>Struct ShellSurfaceUserImplementation</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#fields">Fields</a><div class="sidebar-links"><a href="#structfield.new_client">new_client</a><a href="#structfield.client_pong">client_pong</a><a href="#structfield.new_toplevel">new_toplevel</a><a href="#structfield.new_popup">new_popup</a><a href="#structfield.move_">move_</a><a href="#structfield.resize">resize</a><a href="#structfield.grab">grab</a><a href="#structfield.change_display_state">change_display_state</a><a href="#structfield.show_window_menu">show_window_menu</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-Copy">Copy</a><a href="#impl-Clone">Clone</a></div></div><p class='location'><a href='../../index.html'>smithay</a>::<wbr><a href='../index.html'>wayland</a>::<wbr><a href='index.html'>shell</a></p><script>window.sidebarCurrent = {name: 'ShellSurfaceUserImplementation', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../index.html'>smithay</a>::<wbr><a href='../index.html'>wayland</a>::<wbr><a href='index.html'>shell</a>::<wbr><a class="struct" href=''>ShellSurfaceUserImplementation</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../src/smithay/wayland/shell/mod.rs.html#835-921' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct ShellSurfaceUserImplementation&lt;U, R, CID, SID, SD&gt; {
+    pub new_client: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(evlh: &amp;mut EventLoopHandle, idata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>SID, client: <a class="struct" href="../../../smithay/wayland/shell/struct.ShellClient.html" title="struct smithay::wayland::shell::ShellClient">ShellClient</a>&lt;SD&gt;),
+    pub client_pong: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(evlh: &amp;mut EventLoopHandle, idata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>SID, client: <a class="struct" href="../../../smithay/wayland/shell/struct.ShellClient.html" title="struct smithay::wayland::shell::ShellClient">ShellClient</a>&lt;SD&gt;),
+    pub new_toplevel: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(evlh: &amp;mut EventLoopHandle, idata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>SID, surface: <a class="struct" href="../../../smithay/wayland/shell/struct.ToplevelSurface.html" title="struct smithay::wayland::shell::ToplevelSurface">ToplevelSurface</a>&lt;U, R, CID, SD&gt;) -&gt; <a class="struct" href="../../../smithay/wayland/shell/struct.ToplevelConfigure.html" title="struct smithay::wayland::shell::ToplevelConfigure">ToplevelConfigure</a>,
+    pub new_popup: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(evlh: &amp;mut EventLoopHandle, idata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>SID, surface: <a class="struct" href="../../../smithay/wayland/shell/struct.PopupSurface.html" title="struct smithay::wayland::shell::PopupSurface">PopupSurface</a>&lt;U, R, CID, SD&gt;) -&gt; <a class="struct" href="../../../smithay/wayland/shell/struct.PopupConfigure.html" title="struct smithay::wayland::shell::PopupConfigure">PopupConfigure</a>,
+    pub move_: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(evlh: &amp;mut EventLoopHandle, idata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>SID, surface: <a class="struct" href="../../../smithay/wayland/shell/struct.ToplevelSurface.html" title="struct smithay::wayland::shell::ToplevelSurface">ToplevelSurface</a>&lt;U, R, CID, SD&gt;, seat: &amp;WlSeat, serial: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>),
+    pub resize: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(evlh: &amp;mut EventLoopHandle, idata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>SID, surface: <a class="struct" href="../../../smithay/wayland/shell/struct.ToplevelSurface.html" title="struct smithay::wayland::shell::ToplevelSurface">ToplevelSurface</a>&lt;U, R, CID, SD&gt;, seat: &amp;WlSeat, serial: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>, edges: ResizeEdge),
+    pub grab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(evlh: &amp;mut EventLoopHandle, idata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>SID, surface: <a class="struct" href="../../../smithay/wayland/shell/struct.PopupSurface.html" title="struct smithay::wayland::shell::PopupSurface">PopupSurface</a>&lt;U, R, CID, SD&gt;, seat: &amp;WlSeat, serial: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>),
+    pub change_display_state: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(evlh: &amp;mut EventLoopHandle, idata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>SID, surface: <a class="struct" href="../../../smithay/wayland/shell/struct.ToplevelSurface.html" title="struct smithay::wayland::shell::ToplevelSurface">ToplevelSurface</a>&lt;U, R, CID, SD&gt;, maximized: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>&gt;, minimized: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>&gt;, fullscreen: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>&gt;, output: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;WlOutput&gt;) -&gt; <a class="struct" href="../../../smithay/wayland/shell/struct.ToplevelConfigure.html" title="struct smithay::wayland::shell::ToplevelConfigure">ToplevelConfigure</a>,
+    pub show_window_menu: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(evlh: &amp;mut EventLoopHandle, idata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>SID, surface: <a class="struct" href="../../../smithay/wayland/shell/struct.ToplevelSurface.html" title="struct smithay::wayland::shell::ToplevelSurface">ToplevelSurface</a>&lt;U, R, CID, SD&gt;, seat: &amp;WlSeat, serial: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>, x: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, y: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>),
+}</pre><div class='docblock'><p>A sub-implementation for the shell</p>
+
+<p>You need to provide this to handle events that the provided implementation
+cannot process for you directly.</p>
+
+<p>Depending on what you want to do, you might implement some of these functions
+as doing nothing.</p>
+</div><h2 id='fields' class='fields small-section-header'>
+                       Fields<a href='#fields' class='anchor'></a></h2><span id="structfield.new_client" class="structfield small-section-header">
+                           <a href="#structfield.new_client" class="anchor field"></a>
+                           <span id="new_client.v" class='invisible'>
+                           <code>new_client: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(evlh: &amp;mut EventLoopHandle, idata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>SID, client: <a class="struct" href="../../../smithay/wayland/shell/struct.ShellClient.html" title="struct smithay::wayland::shell::ShellClient">ShellClient</a>&lt;SD&gt;)</code>
+                           </span></span><div class='docblock'><p>A new shell client was instanciated</p>
+</div><span id="structfield.client_pong" class="structfield small-section-header">
+                           <a href="#structfield.client_pong" class="anchor field"></a>
+                           <span id="client_pong.v" class='invisible'>
+                           <code>client_pong: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(evlh: &amp;mut EventLoopHandle, idata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>SID, client: <a class="struct" href="../../../smithay/wayland/shell/struct.ShellClient.html" title="struct smithay::wayland::shell::ShellClient">ShellClient</a>&lt;SD&gt;)</code>
+                           </span></span><div class='docblock'><p>The pong for a pending ping of this shell client was received</p>
+
+<p>The ShellHandler already checked for you that the serial matches the one
+from the pending ping.</p>
+</div><span id="structfield.new_toplevel" class="structfield small-section-header">
+                           <a href="#structfield.new_toplevel" class="anchor field"></a>
+                           <span id="new_toplevel.v" class='invisible'>
+                           <code>new_toplevel: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(evlh: &amp;mut EventLoopHandle, idata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>SID, surface: <a class="struct" href="../../../smithay/wayland/shell/struct.ToplevelSurface.html" title="struct smithay::wayland::shell::ToplevelSurface">ToplevelSurface</a>&lt;U, R, CID, SD&gt;) -&gt; <a class="struct" href="../../../smithay/wayland/shell/struct.ToplevelConfigure.html" title="struct smithay::wayland::shell::ToplevelConfigure">ToplevelConfigure</a></code>
+                           </span></span><div class='docblock'><p>A new toplevel surface was created</p>
+
+<p>You need to return a <code>ToplevelConfigure</code> from this function, which will be sent
+to the client to configure this surface</p>
+</div><span id="structfield.new_popup" class="structfield small-section-header">
+                           <a href="#structfield.new_popup" class="anchor field"></a>
+                           <span id="new_popup.v" class='invisible'>
+                           <code>new_popup: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(evlh: &amp;mut EventLoopHandle, idata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>SID, surface: <a class="struct" href="../../../smithay/wayland/shell/struct.PopupSurface.html" title="struct smithay::wayland::shell::PopupSurface">PopupSurface</a>&lt;U, R, CID, SD&gt;) -&gt; <a class="struct" href="../../../smithay/wayland/shell/struct.PopupConfigure.html" title="struct smithay::wayland::shell::PopupConfigure">PopupConfigure</a></code>
+                           </span></span><div class='docblock'><p>A new popup surface was created</p>
+
+<p>You need to return a <code>PopupConfigure</code> from this function, which will be sent
+to the client to configure this surface</p>
+</div><span id="structfield.move_" class="structfield small-section-header">
+                           <a href="#structfield.move_" class="anchor field"></a>
+                           <span id="move_.v" class='invisible'>
+                           <code>move_: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(evlh: &amp;mut EventLoopHandle, idata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>SID, surface: <a class="struct" href="../../../smithay/wayland/shell/struct.ToplevelSurface.html" title="struct smithay::wayland::shell::ToplevelSurface">ToplevelSurface</a>&lt;U, R, CID, SD&gt;, seat: &amp;WlSeat, serial: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>)</code>
+                           </span></span><div class='docblock'><p>The client requested the start of an interactive move for this surface</p>
+</div><span id="structfield.resize" class="structfield small-section-header">
+                           <a href="#structfield.resize" class="anchor field"></a>
+                           <span id="resize.v" class='invisible'>
+                           <code>resize: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(evlh: &amp;mut EventLoopHandle, idata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>SID, surface: <a class="struct" href="../../../smithay/wayland/shell/struct.ToplevelSurface.html" title="struct smithay::wayland::shell::ToplevelSurface">ToplevelSurface</a>&lt;U, R, CID, SD&gt;, seat: &amp;WlSeat, serial: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>, edges: ResizeEdge)</code>
+                           </span></span><div class='docblock'><p>The client requested the start of an interactive resize for this surface</p>
+
+<p>The <code>edges</code> argument specifies which part of the window&#39;s border is being dragged.</p>
+</div><span id="structfield.grab" class="structfield small-section-header">
+                           <a href="#structfield.grab" class="anchor field"></a>
+                           <span id="grab.v" class='invisible'>
+                           <code>grab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(evlh: &amp;mut EventLoopHandle, idata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>SID, surface: <a class="struct" href="../../../smithay/wayland/shell/struct.PopupSurface.html" title="struct smithay::wayland::shell::PopupSurface">PopupSurface</a>&lt;U, R, CID, SD&gt;, seat: &amp;WlSeat, serial: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>)</code>
+                           </span></span><div class='docblock'><p>This popup requests a grab of the pointer</p>
+
+<p>This means it requests to be sent a <code>popup_done</code> event when the pointer leaves
+the grab area.</p>
+</div><span id="structfield.change_display_state" class="structfield small-section-header">
+                           <a href="#structfield.change_display_state" class="anchor field"></a>
+                           <span id="change_display_state.v" class='invisible'>
+                           <code>change_display_state: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(evlh: &amp;mut EventLoopHandle, idata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>SID, surface: <a class="struct" href="../../../smithay/wayland/shell/struct.ToplevelSurface.html" title="struct smithay::wayland::shell::ToplevelSurface">ToplevelSurface</a>&lt;U, R, CID, SD&gt;, maximized: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>&gt;, minimized: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>&gt;, fullscreen: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>&gt;, output: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;WlOutput&gt;) -&gt; <a class="struct" href="../../../smithay/wayland/shell/struct.ToplevelConfigure.html" title="struct smithay::wayland::shell::ToplevelConfigure">ToplevelConfigure</a></code>
+                           </span></span><div class='docblock'><p>A toplevel surface requested its display state to be changed</p>
+
+<p>Each field represents the request of the client for a specific property:</p>
+
+<ul>
+<li><code>None</code>: no request is made to change this property</li>
+<li><code>Some(true)</code>: this property should be enabled</li>
+<li><code>Some(false)</code>: this property should be disabled</li>
+</ul>
+
+<p>For fullscreen/maximization, the client can also optionnaly request a specific
+output.</p>
+
+<p>You are to answer with a <code>ToplevelConfigure</code> that will be sent to the client in
+response.</p>
+</div><span id="structfield.show_window_menu" class="structfield small-section-header">
+                           <a href="#structfield.show_window_menu" class="anchor field"></a>
+                           <span id="show_window_menu.v" class='invisible'>
+                           <code>show_window_menu: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(evlh: &amp;mut EventLoopHandle, idata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>SID, surface: <a class="struct" href="../../../smithay/wayland/shell/struct.ToplevelSurface.html" title="struct smithay::wayland::shell::ToplevelSurface">ToplevelSurface</a>&lt;U, R, CID, SD&gt;, seat: &amp;WlSeat, serial: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>, x: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, y: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>)</code>
+                           </span></span><div class='docblock'><p>The client requests the window menu to be displayed on this surface at this location</p>
+
+<p>This menu belongs to the compositor. It is typically expected to contain options for
+control of the window (maximize/minimize/close/move/etc...).</p>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Copy' class='impl'><span class='in-band'><code>impl&lt;U, R, CID, SID, SD&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html" title="trait core::marker::Copy">Copy</a> for <a class="struct" href="../../../smithay/wayland/shell/struct.ShellSurfaceUserImplementation.html" title="struct smithay::wayland::shell::ShellSurfaceUserImplementation">ShellSurfaceUserImplementation</a>&lt;U, R, CID, SID, SD&gt;</code><a href='#impl-Copy' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/wayland/shell/mod.rs.html#923' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 id='impl-Clone' class='impl'><span class='in-band'><code>impl&lt;U, R, CID, SID, SD&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a> for <a class="struct" href="../../../smithay/wayland/shell/struct.ShellSurfaceUserImplementation.html" title="struct smithay::wayland::shell::ShellSurfaceUserImplementation">ShellSurfaceUserImplementation</a>&lt;U, R, CID, SID, SD&gt;</code><a href='#impl-Clone' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/wayland/shell/mod.rs.html#924-928' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class="method"><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class="struct" href="../../../smithay/wayland/shell/struct.ShellSurfaceUserImplementation.html" title="struct smithay::wayland::shell::ShellSurfaceUserImplementation">ShellSurfaceUserImplementation</a>&lt;U, R, CID, SID, SD&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/wayland/shell/mod.rs.html#925-927' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class="method"><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self)</code></span><span class='out-of-band'><div class='ghost'></div><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/clone.rs.html#112-114' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "smithay";
+    </script>
+    <script src="../../../main.js"></script>
+    <script defer src="../../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+(function() {var implementors = {};
+implementors["smithay"] = ["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/nightly/core/default/trait.Default.html\" title=\"trait core::default::Default\">Default</a> for <a class=\"struct\" href=\"smithay/backend/graphics/egl/context/struct.PixelFormatRequirements.html\" title=\"struct smithay::backend::graphics::egl::context::PixelFormatRequirements\">PixelFormatRequirements</a>","impl&lt;U:&nbsp;<a class=\"trait\" href=\"https://doc.rust-lang.org/nightly/core/default/trait.Default.html\" title=\"trait core::default::Default\">Default</a>&gt; <a class=\"trait\" href=\"https://doc.rust-lang.org/nightly/core/default/trait.Default.html\" title=\"trait core::default::Default\">Default</a> for <a class=\"struct\" href=\"smithay/wayland/compositor/struct.SurfaceAttributes.html\" title=\"struct smithay::wayland::compositor::SurfaceAttributes\">SurfaceAttributes</a>&lt;U&gt;","impl <a class=\"trait\" href=\"https://doc.rust-lang.org/nightly/core/default/trait.Default.html\" title=\"trait core::default::Default\">Default</a> for <a class=\"struct\" href=\"smithay/wayland/compositor/struct.SubsurfaceRole.html\" title=\"struct smithay::wayland::compositor::SubsurfaceRole\">SubsurfaceRole</a>","impl <a class=\"trait\" href=\"https://doc.rust-lang.org/nightly/core/default/trait.Default.html\" title=\"trait core::default::Default\">Default</a> for <a class=\"struct\" href=\"smithay/wayland/compositor/struct.RegionAttributes.html\" title=\"struct smithay::wayland::compositor::RegionAttributes\">RegionAttributes</a>","impl <a class=\"trait\" href=\"https://doc.rust-lang.org/nightly/core/default/trait.Default.html\" title=\"trait core::default::Default\">Default</a> for <a class=\"enum\" href=\"smithay/wayland/shell/enum.ShellSurfacePendingState.html\" title=\"enum smithay::wayland::shell::ShellSurfacePendingState\">ShellSurfacePendingState</a>",];
+
+            if (window.register_implementors) {
+                window.register_implementors(implementors);
+            } else {
+                window.pending_implementors = implementors;
+            }
+        
+})()

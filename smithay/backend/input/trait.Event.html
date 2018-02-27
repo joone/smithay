@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Event` trait in crate `smithay`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Event">
+
+    <title>smithay::backend::input::Event - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc trait">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        
+        <p class='location'>Trait Event</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#required-methods">Required Methods</a><div class="sidebar-links"><a href="#tymethod.time">time</a></div><a class="sidebar-title" href="#foreign-impls">Implementations on Foreign Types</a><div class="sidebar-links"><a href="#impl-Event">KeyboardKeyEvent</a><a href="#impl-Event">PointerButtonEvent</a><a href="#impl-Event">PointerMotionEvent</a><a href="#impl-Event">PointerMotionAbsoluteEvent</a><a href="#impl-Event">TouchDownEvent</a><a href="#impl-Event">TouchMotionEvent</a><a href="#impl-Event">TouchUpEvent</a><a href="#impl-Event">TouchCancelEvent</a><a href="#impl-Event">TouchFrameEvent</a></div><a class="sidebar-title" href="#implementors">Implementors</a></div><p class='location'><a href='../../index.html'>smithay</a>::<wbr><a href='../index.html'>backend</a>::<wbr><a href='index.html'>input</a></p><script>window.sidebarCurrent = {name: 'Event', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Trait <a href='../../index.html'>smithay</a>::<wbr><a href='../index.html'>backend</a>::<wbr><a href='index.html'>input</a>::<wbr><a class="trait" href=''>Event</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../src/smithay/backend/input.rs.html#76-84' title='goto source code'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait Event {
+    fn <a href='#tymethod.time' class='fnname'>time</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>;
+}</pre><div class='docblock'><p>Trait for generic functions every input event does provide/</p>
+</div>
+            <h2 id='required-methods' class='small-section-header'>
+              Required Methods<a href='#required-methods' class='anchor'></a>
+            </h2>
+            <div class='methods'>
+        <h3 id='tymethod.time' class='method'><span id='time.v' class='invisible'><code>fn <a href='#tymethod.time' class='fnname'>time</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a></code></span></h3><div class='docblock'><p>Returns an upward counting variable useful for event ordering.</p>
+
+<p>Makes no gurantees about actual time passed between events.</p>
+</div></div>
+                <h2 id='foreign-impls' class='small-section-header'>
+                  Implementations on Foreign Types<a href='#foreign-impls' class='anchor'></a>
+                </h2>
+            <h3 id='impl-Event' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../../smithay/backend/input/trait.Event.html" title="trait smithay::backend::input::Event">Event</a> for KeyboardKeyEvent</code><a href='#impl-Event' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#54-58' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.time' class="method"><span id='time.v-1' class='invisible'><code>fn <a href='#method.time' class='fnname'>time</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#55-57' title='goto source code'>[src]</a></span></h4>
+</div></span><h3 id='impl-Event-1' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../../smithay/backend/input/trait.Event.html" title="trait smithay::backend::input::Event">Event</a> for PointerButtonEvent</code><a href='#impl-Event-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#108-112' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.time-1' class="method"><span id='time.v-2' class='invisible'><code>fn <a href='#method.time' class='fnname'>time</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#109-111' title='goto source code'>[src]</a></span></h4>
+</div></span><h3 id='impl-Event-2' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../../smithay/backend/input/trait.Event.html" title="trait smithay::backend::input::Event">Event</a> for PointerMotionEvent</code><a href='#impl-Event-2' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#129-133' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.time-2' class="method"><span id='time.v-3' class='invisible'><code>fn <a href='#method.time' class='fnname'>time</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#130-132' title='goto source code'>[src]</a></span></h4>
+</div></span><h3 id='impl-Event-3' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../../smithay/backend/input/trait.Event.html" title="trait smithay::backend::input::Event">Event</a> for PointerMotionAbsoluteEvent</code><a href='#impl-Event-3' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#144-148' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.time-3' class="method"><span id='time.v-4' class='invisible'><code>fn <a href='#method.time' class='fnname'>time</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#145-147' title='goto source code'>[src]</a></span></h4>
+</div></span><h3 id='impl-Event-4' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../../smithay/backend/input/trait.Event.html" title="trait smithay::backend::input::Event">Event</a> for TouchDownEvent</code><a href='#impl-Event-4' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#168-172' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.time-4' class="method"><span id='time.v-5' class='invisible'><code>fn <a href='#method.time' class='fnname'>time</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#169-171' title='goto source code'>[src]</a></span></h4>
+</div></span><h3 id='impl-Event-5' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../../smithay/backend/input/trait.Event.html" title="trait smithay::backend::input::Event">Event</a> for TouchMotionEvent</code><a href='#impl-Event-5' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#196-200' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.time-5' class="method"><span id='time.v-6' class='invisible'><code>fn <a href='#method.time' class='fnname'>time</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#197-199' title='goto source code'>[src]</a></span></h4>
+</div></span><h3 id='impl-Event-6' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../../smithay/backend/input/trait.Event.html" title="trait smithay::backend::input::Event">Event</a> for TouchUpEvent</code><a href='#impl-Event-6' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#224-228' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.time-6' class="method"><span id='time.v-7' class='invisible'><code>fn <a href='#method.time' class='fnname'>time</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#225-227' title='goto source code'>[src]</a></span></h4>
+</div></span><h3 id='impl-Event-7' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../../smithay/backend/input/trait.Event.html" title="trait smithay::backend::input::Event">Event</a> for TouchCancelEvent</code><a href='#impl-Event-7' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#236-240' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.time-7' class="method"><span id='time.v-8' class='invisible'><code>fn <a href='#method.time' class='fnname'>time</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#237-239' title='goto source code'>[src]</a></span></h4>
+</div></span><h3 id='impl-Event-8' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../../smithay/backend/input/trait.Event.html" title="trait smithay::backend::input::Event">Event</a> for TouchFrameEvent</code><a href='#impl-Event-8' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#248-252' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.time-8' class="method"><span id='time.v-9' class='invisible'><code>fn <a href='#method.time' class='fnname'>time</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#249-251' title='goto source code'>[src]</a></span></h4>
+</div></span>
+        <h2 id='implementors' class='small-section-header'>
+          Implementors<a href='#implementors' class='anchor'></a>
+        </h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><div class='out-of-band'><a class='srclink' href='../../../src/smithay/backend/input.rs.html#94-98' title='goto source code'>[src]</a></div><code>impl Event for <a class="enum" href="../../../smithay/backend/input/enum.UnusedEvent.html" title="enum smithay::backend::input::UnusedEvent">UnusedEvent</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../../../src/smithay/backend/winit.rs.html#318-322' title='goto source code'>[src]</a></div><code>impl BackendEvent for <a class="struct" href="../../../smithay/backend/winit/struct.WinitKeyboardInputEvent.html" title="struct smithay::backend::winit::WinitKeyboardInputEvent">WinitKeyboardInputEvent</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../../../src/smithay/backend/winit.rs.html#347-351' title='goto source code'>[src]</a></div><code>impl BackendEvent for <a class="struct" href="../../../smithay/backend/winit/struct.WinitMouseMovedEvent.html" title="struct smithay::backend::winit::WinitMouseMovedEvent">WinitMouseMovedEvent</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../../../src/smithay/backend/winit.rs.html#395-399' title='goto source code'>[src]</a></div><code>impl BackendEvent for <a class="struct" href="../../../smithay/backend/winit/struct.WinitMouseWheelEvent.html" title="struct smithay::backend::winit::WinitMouseWheelEvent">WinitMouseWheelEvent</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../../../src/smithay/backend/winit.rs.html#431-435' title='goto source code'>[src]</a></div><code>impl BackendEvent for <a class="struct" href="../../../smithay/backend/winit/struct.WinitMouseInputEvent.html" title="struct smithay::backend::winit::WinitMouseInputEvent">WinitMouseInputEvent</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../../../src/smithay/backend/winit.rs.html#456-460' title='goto source code'>[src]</a></div><code>impl BackendEvent for <a class="struct" href="../../../smithay/backend/winit/struct.WinitTouchStartedEvent.html" title="struct smithay::backend::winit::WinitTouchStartedEvent">WinitTouchStartedEvent</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../../../src/smithay/backend/winit.rs.html#509-513' title='goto source code'>[src]</a></div><code>impl BackendEvent for <a class="struct" href="../../../smithay/backend/winit/struct.WinitTouchMovedEvent.html" title="struct smithay::backend::winit::WinitTouchMovedEvent">WinitTouchMovedEvent</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../../../src/smithay/backend/winit.rs.html#554-558' title='goto source code'>[src]</a></div><code>impl BackendEvent for <a class="struct" href="../../../smithay/backend/winit/struct.WinitTouchEndedEvent.html" title="struct smithay::backend::winit::WinitTouchEndedEvent">WinitTouchEndedEvent</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../../../src/smithay/backend/winit.rs.html#573-577' title='goto source code'>[src]</a></div><code>impl BackendEvent for <a class="struct" href="../../../smithay/backend/winit/struct.WinitTouchCancelledEvent.html" title="struct smithay::backend::winit::WinitTouchCancelledEvent">WinitTouchCancelledEvent</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../../../src/smithay/backend/libinput.rs.html#82-87' title='goto source code'>[src]</a></div><code>impl&lt;'a&gt; Event for <a class="struct" href="../../../smithay/backend/libinput/struct.PointerAxisEvent.html" title="struct smithay::backend::libinput::PointerAxisEvent">PointerAxisEvent</a></code></li>
+</ul><script type="text/javascript" async
+                         src="../../../implementors/smithay/backend/input/trait.Event.js">
+                 </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "smithay";
+    </script>
+    <script src="../../../main.js"></script>
+    <script defer src="../../../search-index.js"></script>
+</body>
+</html>
